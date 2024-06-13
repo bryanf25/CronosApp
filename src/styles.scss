@@ -1,1 +1,25 @@
 /* You can add global styles to this file, and also import other style files */
+.title-page {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.filters {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.search-form {
+    display: flex;
+    flex-direction: column;
+    /* Asegura que los elementos se dispongan verticalmente */
+    gap: 10px;
+    /* Añade un margen entre los elementos, opcional */
+}
+
+.dropdown-fixed{
+    width: 250px;
+}

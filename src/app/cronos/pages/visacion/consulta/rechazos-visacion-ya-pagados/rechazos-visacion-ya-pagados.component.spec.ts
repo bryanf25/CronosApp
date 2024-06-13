@@ -1,24 +1,26 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { ChequesFueraRangoComponent } from './cheques-fuera-rango.component';
+import { RechazosVisacionYaPagadosComponent } from './rechazos-visacion-ya-pagados.component';
 import { PrimengModule } from '../../../../../primeng/primeng.module';
+import { SharedModule } from '../../../../../shared/shared.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
-describe('ChequesFueraRangoComponent', () => {
-  let component: ChequesFueraRangoComponent;
-  let fixture: ComponentFixture<ChequesFueraRangoComponent>;
+describe('RechazosVisacionYaPagadosComponent', () => {
+  let component: RechazosVisacionYaPagadosComponent;
+  let fixture: ComponentFixture<RechazosVisacionYaPagadosComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ChequesFueraRangoComponent],
+      declarations: [RechazosVisacionYaPagadosComponent],
       imports:[
         PrimengModule,
         BrowserAnimationsModule,
+        SharedModule
       ]
     })
     .compileComponents();
     
-    fixture = TestBed.createComponent(ChequesFueraRangoComponent);
+    fixture = TestBed.createComponent(RechazosVisacionYaPagadosComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

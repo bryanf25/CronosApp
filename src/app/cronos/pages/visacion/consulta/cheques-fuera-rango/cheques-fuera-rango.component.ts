@@ -6,5 +6,6 @@ import { Component } from '@angular/core';
   styleUrl: './cheques-fuera-rango.component.scss'
 })
 export class ChequesFueraRangoComponent {
+  fechaProceso: Date = new Date();
 
 }

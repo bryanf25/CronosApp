@@ -1,0 +1,46 @@
+<h1 class="title-page">{{'consulta rechazos visación - ya pagados' | titlecase}}</h1>
+<div class="filters">
+    <fieldset style="width: 30%;">
+        <legend>Filtros Consulta</legend>
+        <p-accordion [multiple]="true" [activeIndex]="[0]">
+            <p-accordionTab>
+                <form class="grid formgrid">
+                    <div class="col-6 align-content-center formgrid pl-6">
+
+                        <div class="field">
+                            <label class="col-fixed" style="width: 150px;">Central De Canje</label>
+                            <p-dropdown class="dropdown-fixed" [options]="['registro1','registro2']" placeholder="Todos"
+                                [showClear]="true" formControlName="centralcanje"></p-dropdown>
+                        </div>
+                        <br>
+
+                        <div class="field">
+                            <label class="col-fixed" style="width: 150px;">Oficina</label>
+                            <p-dropdown class="dropdown-fixed" [options]="['registro1','registro2']" placeholder="Todos"
+                                [showClear]="true" formControlName="oficina"></p-dropdown>
+                        </div>
+                        <br>
+
+                    </div>
+                    <div class="col-6 align-content-center flex justify-content-center flex-wrap mb-3">
+                        <p-button icon="pi pi-search" label="Consultar" (onClick)="searchData()"></p-button>
+                    </div>
+
+                </form>
+
+            </p-accordionTab>
+        </p-accordion>
+    </fieldset>
+</div>
+<div class="align-content-center flex justify-content-center flex-wrap m-3">
+    <p>Fecha del proceso: {{fechaProcesoString}}</p>
+</div>
+<div class="align-content-center flex justify-content-center flex-wrap">
+    <app-table  [columns]="columns" [data]="data"></app-table>
+</div>
+
+
+
+<!-- <p-dropdown [options]="registros"  placeholder="Tipo de Registro" optionLabel="Todos" [showClear]="true" formControlName="registro"></p-dropdown>
+        <p-dropdown [options]="oficinas"  placeholder="Oficina" optionLabel="Todos" [showClear]="true" formControlName="oficina"></p-dropdown>
+        <p-dropdown [options]="centroscanje"  placeholder="Central de canje" optionLabel="Todos" [showClear]="true" formControlName="centrocanje"></p-dropdown> -->

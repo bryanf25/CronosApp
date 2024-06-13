@@ -1,0 +1,74 @@
+{
+    "rechazosVisacion": [
+        {
+            "tipoOperacion": "YaPagados",
+            "cencje": "001",
+            "oficina": "0000",
+            "cuenta": "0000231",
+            "bancoReceptor": "001",
+            "chequera": "300012343",
+            "numeroCheque": "300012343",
+            "nombreTitular": "300012343",
+            "valor": 50005,
+            "motivoRechazo": "",
+            "causaDev1": "25",
+            "causaDev2": "25"
+        },
+        {
+            "tipoOperacion": "YaPagados",
+            "cencje": "001",
+            "oficina": "0000",
+            "cuenta": "0000231",
+            "bancoReceptor": "001",
+            "chequera": "300012343",
+            "numeroCheque": "300012343",
+            "nombreTitular": "300012343",
+            "valor": 70007,
+            "motivoRechazo": "",
+            "causaDev1": "25",
+            "causaDev2": "25"
+        },
+        {
+            "tipoOperacion": "YaPagados",
+            "cencje": "001",
+            "oficina": "0000",
+            "cuenta": "0000231",
+            "bancoReceptor": "001",
+            "chequera": "300012343",
+            "numeroCheque": "300012343",
+            "nombreTitular": "300012343",
+            "valor": 90009,
+            "motivoRechazo": "",
+            "causaDev1": "25",
+            "causaDev2": "25"
+        },
+        {
+            "tipoOperacion": "YaPagados",
+            "cencje": "001",
+            "oficina": "0000",
+            "cuenta": "0000231",
+            "bancoReceptor": "001",
+            "chequera": "300012343",
+            "numeroCheque": "300012343",
+            "nombreTitular": "300012343",
+            "valor": 110011,
+            "motivoRechazo": "",
+            "causaDev1": "25",
+            "causaDev2": "25"
+        },
+        {
+            "tipoOperacion": "YaPagados",
+            "cencje": "001",
+            "oficina": "0000",
+            "cuenta": "0000231",
+            "bancoReceptor": "001",
+            "chequera": "300012343",
+            "numeroCheque": "300012343",
+            "nombreTitular": "300012343",
+            "valor": 130013,
+            "motivoRechazo": "",
+            "causaDev1": "25",
+            "causaDev2": "25"
+        }
+    ]
+}

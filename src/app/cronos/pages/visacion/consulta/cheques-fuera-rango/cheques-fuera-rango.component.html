@@ -1,1 +1,44 @@
-<p>cheques-fuera-rango works!</p>
+<h1 class="title-page">{{'cheques fuera rango' | uppercase}}</h1>
+<div class="filters">
+    <fieldset style="width: 30%;">
+        <legend>Filtros Consulta</legend>
+        <p-accordion [multiple]="true" [activeIndex]="[0]">
+            <p-accordionTab>
+                <form class="grid formgrid">
+                    <div class="col-6 align-content-center formgrid pl-6">
+
+                        <div class="field">
+                            <label class="col-fixed"style="width: 150px;">Tipo de Registro</label>
+                            <p-dropdown class="dropdown-fixed"  [options]="['registro1','registro2']" placeholder="Todos"
+                                [showClear]="true" formControlName="registro"></p-dropdown>
+                        </div>
+                        <br>
+
+                        <div class="field">
+                            <label class="col-fixed"style="width: 150px;" >Oficina</label>
+                            <p-dropdown class="dropdown-fixed" [options]="['registro1','registro2']" placeholder="Todos"
+                                [showClear]="true" formControlName="oficina"></p-dropdown>
+                        </div>
+                        <br>
+
+                        <div class="field">
+                            <label class="col-fixed"style="width: 150px;">Central De Canje</label>
+                            <p-dropdown class="dropdown-fixed" [options]="['registro1','registro2']" placeholder="Todos"
+                                [showClear]="true" formControlName="centrocanje"></p-dropdown>
+                        </div>
+
+                    </div>
+                    <div class="col-6 align-content-center flex justify-content-center flex-wrap mb-3">
+                        <p-button icon="pi pi-search" label="Consultar"></p-button>
+                    </div>
+
+                </form>
+
+            </p-accordionTab>
+        </p-accordion>
+    </fieldset>
+    </div>
+    <div class="align-content-center flex justify-content-center flex-wrap m-3">
+        <p>Fecha del proceso: {{fechaProceso | date: 'fullDate'}}</p>
+
+    </div>

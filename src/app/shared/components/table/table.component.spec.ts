@@ -1,22 +1,22 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { CronosComponent } from './cronos.component';
-import { RouterModule } from '@angular/router';
+import { TableComponent } from './table.component';
+import { PrimengModule } from '../../../primeng/primeng.module';
 
-describe('CronosComponent', () => {
-  let component: CronosComponent;
-  let fixture: ComponentFixture<CronosComponent>;
+describe('TableComponent', () => {
+  let component: TableComponent;
+  let fixture: ComponentFixture<TableComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [CronosComponent],
+      declarations: [TableComponent],
       imports:[
-        RouterModule.forRoot([]),
+        PrimengModule
       ]
     })
     .compileComponents();
     
-    fixture = TestBed.createComponent(CronosComponent);
+    fixture = TestBed.createComponent(TableComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 
 import { CronosRoutingModule } from './cronos-routing.module';
 import { CronosComponent } from './cronos.component';
+import { HttpClientModule } from '@angular/common/http';
 
 
 
@@ -12,11 +13,11 @@ import { CronosComponent } from './cronos.component';
   ],
   imports: [
     CommonModule,
-    CronosRoutingModule
+    CronosRoutingModule,
+    HttpClientModule
   ],
   exports:[
     CronosComponent,
-    
   ]
 })
 export class CronosModule { }

@@ -5,6 +5,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { SharedModule } from './shared/shared.module';
 import { CronosModule } from './cronos/cronos.module';
+import { PrimengModule } from './primeng/primeng.module';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -12,8 +14,10 @@ import { CronosModule } from './cronos/cronos.module';
   ],
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
     AppRoutingModule,
     CronosModule,
+    PrimengModule,
     SharedModule
   ],
   providers: [
