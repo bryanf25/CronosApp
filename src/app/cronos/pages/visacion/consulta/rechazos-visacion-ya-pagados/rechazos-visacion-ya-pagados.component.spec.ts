@@ -4,6 +4,8 @@ import { RechazosVisacionYaPagadosComponent } from './rechazos-visacion-ya-pagad
 import { PrimengModule } from '../../../../../primeng/primeng.module';
 import { SharedModule } from '../../../../../shared/shared.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { HttpClientTestingModule, HttpTestingController } from '@angular/common/http/testing';
+
 
 describe('RechazosVisacionYaPagadosComponent', () => {
   let component: RechazosVisacionYaPagadosComponent;
@@ -15,7 +17,8 @@ describe('RechazosVisacionYaPagadosComponent', () => {
       imports:[
         PrimengModule,
         BrowserAnimationsModule,
-        SharedModule
+        SharedModule,
+        HttpClientTestingModule
       ]
     })
     .compileComponents();

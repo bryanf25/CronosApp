@@ -70,5 +70,89 @@
             "causaDev1": "25",
             "causaDev2": "25"
         }
+    ],
+    "centrosCanje": [
+        {
+            "id": 1,
+            "nombre": "Bogotá"
+        },
+        {
+            "id": 2,
+            "nombre": "Medellín"
+        },
+        {
+            "id": 3,
+            "nombre": "Cali"
+        },
+        {
+            "id": 4,
+            "nombre": "Barranquilla"
+        },
+        {
+            "id": 5,
+            "nombre": "Cartagena"
+        },
+        {
+            "id": 6,
+            "nombre": "Bucaramanga"
+        },
+        {
+            "id": 7,
+            "nombre": "Pereira"
+        },
+        {
+            "id": 8,
+            "nombre": "Manizales"
+        },
+        {
+            "id": 9,
+            "nombre": "Santa Marta"
+        },
+        {
+            "id": 10,
+            "nombre": "Cúcuta"
+        }
+    ],
+    "oficinas": [
+        {
+            "id": 1001,
+            "nombre": "Centro Internacional"
+        },
+        {
+            "id": 1002,
+            "nombre": "Zona T"
+        },
+        {
+            "id": 1003,
+            "nombre": "Parque de la 93"
+        },
+        {
+            "id": 1004,
+            "nombre": "Chapinero"
+        },
+        {
+            "id": 1005,
+            "nombre": "Usaquén"
+        },
+        {
+            "id": 1006,
+            "nombre": "Salitre"
+        },
+        {
+            "id": 1007,
+            "nombre": "Avenida Chile"
+        },
+        {
+            "id": 1008,
+            "nombre": "Cedritos"
+        },
+        {
+            "id": 1009,
+            "nombre": "Fontibón"
+        },
+        {
+            "id": 1010,
+            "nombre": "Teusaquillo"
+        }
     ]
 }

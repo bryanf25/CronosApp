@@ -3,6 +3,11 @@ import { format } from 'date-fns';
 import { ColumnTable } from '../../../../interfaces/column-table.interface';
 import { RechazosVisacion } from '../../../../interfaces/rechazos-visacion.interface';
 import { VistasService } from '../../../../services/vistas.service';
+import { CentroCanjeService } from '../../../../services/centro-canje.service';
+import { OficinaService } from '../../../../services/oficina.service';
+import { FormBuilder, FormGroup } from '@angular/forms';
+import { CentroCanje } from '../../../../interfaces/consultas/centros-canje.interface';
+import { Oficina } from '../../../../interfaces/consultas/oficina.interface';
 
 
 @Component({
@@ -11,7 +16,11 @@ import { VistasService } from '../../../../services/vistas.service';
   styleUrl: './rechazos-visacion-ya-pagados.component.scss'
 })
 export class RechazosVisacionYaPagadosComponent implements OnInit {
+
+  public rechazosVisacionYaForm!: FormGroup;
   fechaProceso: Date = new Date();
+  centrosDeCanje!: CentroCanje[];
+  oficinas!: Oficina[];
   fechaProcesoString: string = ''
   columns: ColumnTable[] = [
     { field: 'tipoOperacion', header: 'Tipo Operación', type: 'text' },
@@ -30,18 +39,53 @@ export class RechazosVisacionYaPagadosComponent implements OnInit {
 
   data: RechazosVisacion[] = [];
 
-  constructor(private vistasService:VistasService) { }
+  constructor(
+    private fb: FormBuilder,
+    private vistasService: VistasService,
+    private centroCanjeService: CentroCanjeService,
+    private oficinasService: OficinaService
+  ) { }
 
   ngOnInit(): void {
+    this.loadCentrosCanje();
+    this.loadOficinas();
     this.fechaProcesoString = format(this.fechaProceso, 'dd/MM/yyyy')
-   
+
+  }
+
+  initFormFilter() {
+    this.rechazosVisacionYaForm = this.fb.group({
+      centralcanje: [''],
+      oficina: ['']
+    })
+  }
+
+  loadCentrosCanje() {
+    this.centroCanjeService.getAll().subscribe(response =>{
+      this.centrosDeCanje = response
+      this.centrosDeCanje = this.centrosDeCanje.map(centrocanje => ({
+        ...centrocanje,
+        displayName: `${centrocanje.id} - ${centrocanje.nombre}`
+      }));
+    }
+    )
+  }
+
+  loadOficinas() {
+    this.oficinasService.getAll().subscribe(response => {
+      this.oficinas = response
+      this.oficinas = this.oficinas.map(oficina => ({
+        ...oficina,
+        displayName: `${oficina.id} - ${oficina.nombre}`
+      }));
+    }
+    )
   }
 
 
-  searchData(){
-    debugger
+  searchData() {
     this.vistasService.getRechazosVisacionYaPagados().subscribe(response => this.data = response)
- 
+
   }
 
 
