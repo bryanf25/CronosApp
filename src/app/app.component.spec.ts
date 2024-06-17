@@ -1,15 +1,25 @@
 import { TestBed } from '@angular/core/testing';
 import { RouterTestingModule } from '@angular/router/testing';
 import { AppComponent } from './app.component';
+import { RouterModule } from '@angular/router';
+import { SharedModule } from 'primeng/api';
+import { HeaderComponent } from './shared/components/header/header.component';
+import { NavbarmenuComponent } from './shared/components/navbarmenu/navbarmenu.component';
+import { CronosComponent } from './cronos/cronos.component';
+import { PrimengModule } from './primeng/primeng.module';
 
 describe('AppComponent', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       imports: [
-        RouterTestingModule
+        RouterModule.forRoot([]),
+        PrimengModule
       ],
       declarations: [
-        AppComponent
+        AppComponent,
+        HeaderComponent,
+        NavbarmenuComponent,
+        CronosComponent
       ],
     }).compileComponents();
   });
@@ -18,18 +28,5 @@ describe('AppComponent', () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
     expect(app).toBeTruthy();
-  });
-
-  it(`should have as title 'CronosApp'`, () => {
-    const fixture = TestBed.createComponent(AppComponent);
-    const app = fixture.componentInstance;
-    expect(app.title).toEqual('CronosApp');
-  });
-
-  it('should render title', () => {
-    const fixture = TestBed.createComponent(AppComponent);
-    fixture.detectChanges();
-    const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('h1')?.textContent).toContain('Hello, CronosApp');
   });
 });

@@ -1,0 +1,32 @@
+<p-table [value]="data" styleClass="p-datatable-gridlines" >
+    <ng-template pTemplate="header">
+      <tr>
+        <th *ngFor="let col of columns" class="text-center">{{col.header}}</th>
+      </tr>
+    </ng-template>
+   <ng-template pTemplate="body" let-rowData>
+      <tr>
+        <td *ngFor="let col of columns" class="text-center">
+          <span *ngIf="col.field === 'valor'; else normalField">
+            {{ rowData[col.field] | currency:'USD':'symbol':'1.0' }}
+          </span>
+          <ng-template #normalField>
+            {{rowData[col.field]}}
+          </ng-template>
+
+          <!-- <ng-container [ngSwitch]="col.type">
+            <ng-container *ngSwitchCase="'text'">{{rowData[col.field]}}</ng-container>
+            <ng-container *ngSwitchCase="'dropdown'">
+              <p-dropdown 
+                [options]="col.options"
+                [(ngModel)]="rowData[col.field]"
+                [style]="{width:'100%'}"
+                [placeholder]="'Select a value'">
+              </p-dropdown>
+            </ng-container>
+          </ng-container> -->
+        </td>
+      </tr>
+    </ng-template>
+  </p-table>
+  

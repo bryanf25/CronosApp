@@ -1,0 +1,16 @@
+.header {
+    padding: 3rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    height: 100%;
+    width: 100%;
+    position: relative;
+}
+
+.user {
+    display: flex; 
+    align-items: center; 
+    padding-top: 1rem;
+    gap: 10px; /* Espacio entre los elementos */
+}
