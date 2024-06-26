@@ -16,20 +16,20 @@
 
                         <div class="field">
                             <label class="col-fixed" style="width: 150px;">Oficina</label>
-                            <p-dropdown class="dropdown-fixed" [options]="['registro1','registro2']" placeholder="Todos"
-                                [showClear]="true" formControlName="oficina"></p-dropdown>
+                            <p-dropdown class="dropdown-fixed" [options]="oficinas" placeholder="Todos"
+                                [showClear]="true" formControlName="oficina" optionLabel="displayName"></p-dropdown>
                         </div>
                         <br>
 
                         <div class="field">
                             <label class="col-fixed" style="width: 150px;">Central De Canje</label>
                             <p-dropdown class="dropdown-fixed" [options]="['registro1','registro2']" placeholder="Todos"
-                                [showClear]="true" formControlName="centrocanje"></p-dropdown>
+                                [showClear]="true" formControlName="centrocanje" optionLabel="displayName"></p-dropdown>
                         </div>
 
                     </div>
                     <div class="col-6 align-content-center flex justify-content-center flex-wrap mb-3">
-                        <p-button icon="pi pi-search" label="Consultar"></p-button>
+                        <p-button icon="pi pi-search" label="Consultar" (onClick)="searchData()"></p-button>
                     </div>
 
                 </form>
@@ -42,6 +42,6 @@
     <p>Fecha del proceso: {{fechaProcesoString}}</p>
 </div>
 
-<!-- <div class="align-content-center flex justify-content-center flex-wrap">
+<div class="align-content-center flex justify-content-center flex-wrap">
     <app-table  [columns]="columns" [data]="data"></app-table>
-</div> -->
+</div>

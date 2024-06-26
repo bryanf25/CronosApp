@@ -151,6 +151,74 @@
             "valorTotal": "25"
         }
     ],
+    "chequesFueraRango": [
+        {
+            "oficinaCeo": "10001",
+            "cuenta": "40000",
+            "transaccion": "50000",
+            "chequera": "60000",
+            "documento": "70000",
+            "valor": 123122,
+            "razon": "fuera de rango",
+            "cabeceraCentroCanje": "20002",
+            "centroCanje": "30003"
+        },
+        {
+            "oficinaCeo": "20001",
+            "cuenta": "35000",
+            "transaccion": "12345",
+            "chequera": "10000",
+            "documento": "15000",
+            "valor": 80000,
+            "razon": "fuera de rango",
+            "cabeceraCentroCanje": "40004",
+            "centroCanje": "50005"
+        },
+        {
+            "oficinaCeo": "30001",
+            "cuenta": "25000",
+            "transaccion": "67890",
+            "chequera": "15000",
+            "documento": "12000",
+            "valor": 90000,
+            "razon": "fuera de rango",
+            "cabeceraCentroCanje": "60006",
+            "centroCanje": "70007"
+        },
+        {
+            "oficinaCeo": "40001",
+            "cuenta": "18000",
+            "transaccion": "54321",
+            "chequera": "12000",
+            "documento": "13000",
+            "valor": 70000,
+            "razon": "fuera de rango",
+            "cabeceraCentroCanje": "80008",
+            "centroCanje": "90009"
+        },
+        {
+            "oficinaCeo": "50001",
+            "cuenta": "22000",
+            "transaccion": "98765",
+            "chequera": "13000",
+            "documento": "14000",
+            "valor": 60000,
+            "razon": "fuera de rango",
+            "cabeceraCentroCanje": "100010",
+            "centroCanje": "110011"
+        },
+        {
+            "oficinaCeo": "60001",
+            "cuenta": "30000",
+            "transaccion": "24680",
+            "chequera": "14000",
+            "documento": "16000",
+            "valor": 50000,
+            "razon": "fuera de rango",
+            "cabeceraCentroCanje": "120012",
+            "centroCanje": "130013"
+        }
+    ],
     "centrosCanje": [
         {
             "id": 1,
