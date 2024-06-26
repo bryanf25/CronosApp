@@ -71,6 +71,86 @@
             "causaDev2": "25"
         }
     ],
+    "devolucionEnviada": [
+        {
+            "oficinaDestino": "001",
+            "codigoCeo": "001",
+            "entidadDestino": "0000",
+            "numeroCuenta": "0000231",
+            "causalDevolucion1": "001",
+            "causalDevolucion2": "300012343",
+            "valorCheque": "300012343",
+            "chequera": "300012343",
+            "numeroCheque": 30003,
+            "centralCanje": "",
+            "valorTotal": "25"
+        },
+        {
+            "oficinaDestino": "002",
+            "codigoCeo": "001",
+            "entidadDestino": "0000",
+            "numeroCuenta": "0002231",
+            "causalDevolucion1": "001",
+            "causalDevolucion2": "300012343",
+            "valorCheque": "300012343",
+            "chequera": "300012343",
+            "numeroCheque": 50005,
+            "centralCanje": "",
+            "valorTotal": "25"
+        },
+        {
+            "oficinaDestino": "003",
+            "codigoCeo": "001",
+            "entidadDestino": "0000",
+            "numeroCuenta": "0000243",
+            "causalDevolucion1": "001",
+            "causalDevolucion2": "300012343",
+            "valorCheque": "300012343",
+            "chequera": "300012343",
+            "numeroCheque": 70007,
+            "centralCanje": "",
+            "valorTotal": "25"
+        },
+        {
+            "oficinaDestino": "004",
+            "codigoCeo": "001",
+            "entidadDestino": "0000",
+            "numeroCuenta": "0000545",
+            "causalDevolucion1": "001",
+            "causalDevolucion2": "300012343",
+            "valorCheque": "300012343",
+            "chequera": "300012343",
+            "numeroCheque": 90009,
+            "centralCanje": "",
+            "valorTotal": "25"
+        },
+        {
+            "oficinaDestino": "001",
+            "codigoCeo": "002",
+            "entidadDestino": "0000",
+            "numeroCuenta": "0000677",
+            "causalDevolucion1": "001",
+            "causalDevolucion2": "300012343",
+            "valorCheque": "300012343",
+            "chequera": "300012343",
+            "numeroCheque": 110011,
+            "centralCanje": "",
+            "valorTotal": "25"
+        },
+        {
+            "oficinaDestino": "002",
+            "codigoCeo": "003",
+            "entidadDestino": "0000",
+            "numeroCuenta": "0000123",
+            "causalDevolucion1": "001",
+            "causalDevolucion2": "300012343",
+            "valorCheque": "300012343",
+            "chequera": "300012343",
+            "numeroCheque": 130013,
+            "centralCanje": "",
+            "valorTotal": "25"
+        }
+    ],
     "centrosCanje": [
         {
             "id": 1,

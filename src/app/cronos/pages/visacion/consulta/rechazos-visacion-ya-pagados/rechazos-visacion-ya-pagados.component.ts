@@ -17,7 +17,7 @@ import { Oficina } from '../../../../interfaces/consultas/oficina.interface';
 })
 export class RechazosVisacionYaPagadosComponent implements OnInit {
 
-  public rechazosVisacionYaForm!: FormGroup;
+  rechazosVisacionYaForm!: FormGroup;
   fechaProceso: Date = new Date();
   centrosDeCanje!: CentroCanje[];
   oficinas!: Oficina[];

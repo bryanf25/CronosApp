@@ -8,21 +8,21 @@
                     <div class="col-6 align-content-center formgrid pl-6">
 
                         <div class="field">
-                            <label class="col-fixed"style="width: 150px;">Tipo de Registro</label>
-                            <p-dropdown class="dropdown-fixed"  [options]="['registro1','registro2']" placeholder="Todos"
+                            <label class="col-fixed" style="width: 150px;">Tipo de Registro</label>
+                            <p-dropdown class="dropdown-fixed" [options]="['registro1','registro2']" placeholder="Todos"
                                 [showClear]="true" formControlName="registro"></p-dropdown>
                         </div>
                         <br>
 
                         <div class="field">
-                            <label class="col-fixed"style="width: 150px;" >Oficina</label>
+                            <label class="col-fixed" style="width: 150px;">Oficina</label>
                             <p-dropdown class="dropdown-fixed" [options]="['registro1','registro2']" placeholder="Todos"
                                 [showClear]="true" formControlName="oficina"></p-dropdown>
                         </div>
                         <br>
 
                         <div class="field">
-                            <label class="col-fixed"style="width: 150px;">Central De Canje</label>
+                            <label class="col-fixed" style="width: 150px;">Central De Canje</label>
                             <p-dropdown class="dropdown-fixed" [options]="['registro1','registro2']" placeholder="Todos"
                                 [showClear]="true" formControlName="centrocanje"></p-dropdown>
                         </div>
@@ -37,8 +37,11 @@
             </p-accordionTab>
         </p-accordion>
     </fieldset>
-    </div>
-    <div class="align-content-center flex justify-content-center flex-wrap m-3">
-        <p>Fecha del proceso: {{fechaProceso | date: 'fullDate'}}</p>
+</div>
+<div class="align-content-center flex justify-content-center flex-wrap m-3">
+    <p>Fecha del proceso: {{fechaProcesoString}}</p>
+</div>
 
-    </div>
+<!-- <div class="align-content-center flex justify-content-center flex-wrap">
+    <app-table  [columns]="columns" [data]="data"></app-table>
+</div> -->
