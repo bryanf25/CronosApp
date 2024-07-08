@@ -1,2 +1,87 @@
 <h1 class="title-page">{{'devolución recibida total' | uppercase}}</h1>
 
+<div class="filters">
+    <fieldset style="width: 50%;">
+        <legend>Filtros Consulta</legend>
+        <p-accordion [multiple]="true" [activeIndex]="[0]">
+            <p-accordionTab>
+                <form class="grid formgrid">
+                    <div class="col-4 align-content-center formgrid pl-6">
+
+                        <div class="field">
+                            <label class="col-fixed" style="width: 150px;">Central De Canje Receptor</label>
+                            <p-dropdown class="dropdown-fixed" [options]="centrosCanjeReceptor" placeholder="Todos"
+                            [showClear]="true" formControlName="centrocanjereceptor"  optionLabel="displayName"></p-dropdown>
+                        </div>
+                        
+                        <div class="field">
+                            <label class="col-fixed" style="width: 150px;">CSC/OAE</label>
+                            <p-dropdown class="dropdown-fixed" [options]="[]" placeholder="Todos"
+                                [showClear]="true" formControlName="cscoae"  optionLabel="displayName"></p-dropdown>
+                        </div>
+                        
+                        <div class="field">
+                            <label class="col-fixed" style="width: 150px;">Oficina Receptora</label>
+                            <p-dropdown class="dropdown-fixed" [options]="oficinas" placeholder="Todos"
+                                [showClear]="true" formControlName="oficinareceptora"  optionLabel="displayName"></p-dropdown>
+                        </div>
+
+                        
+                    </div>
+
+                    <div class="col-4 align-content-center formgrid pl-6">
+                        <div class="field">
+                            <label class="col-fixed" style="width: 150px;">Oficina Envio</label>
+                            <p-dropdown class="dropdown-fixed" [options]="oficinas" placeholder="Todos"
+                            [showClear]="true" formControlName="oficinaenvio"  optionLabel="displayName"></p-dropdown>
+                        </div>
+                        
+                        <div class="field">
+                            <label class="col-fixed" style="width: 150px;">Oficina Afectada</label>
+                            <p-dropdown class="dropdown-fixed" [options]="oficinas" placeholder="Todos"
+                                [showClear]="true" formControlName="oficinaafectada"  optionLabel="displayName"></p-dropdown>
+                        </div>
+
+                        <div class="field">
+                            <label class="col-fixed" style="width: 150px;">Entidad Afectada</label>
+                            <p-dropdown class="dropdown-fixed" [options]="oficinas" placeholder="Todos"
+                                [showClear]="true" formControlName="entidadafectada"  optionLabel="displayName"></p-dropdown>
+                        </div>
+                    </div>
+
+                    <div class="col-4 align-content-center formgrid pl-6">
+
+                        <div class="field">
+                            <label class="col-fixed" style="width: 150px;">Tipo producto Afectado</label>
+                            <p-dropdown class="dropdown-fixed" [options]="[]" placeholder="Todos"
+                            [showClear]="true" formControlName="tipoproductoafectado"  optionLabel="displayName"></p-dropdown>
+                        </div>
+                        
+                        <div class="field">
+                            <label class="col-fixed" style="width: 150px;">Dev.Rec.Especial</label>
+                            <p-dropdown class="dropdown-fixed" [options]="[]" placeholder="Todos"
+                                [showClear]="true" formControlName="devolucionrecespecial"  optionLabel="displayName"></p-dropdown>
+                        </div>
+
+                        <br>
+                        <div class=" align-content-center flex justify-content-center flex-wrap mb-3">
+                            <p-button icon="pi pi-search" label="Consultar" (onClick)="searchData()"></p-button>
+                        </div>
+                    </div>
+                    
+
+                </form>
+
+            </p-accordionTab>
+        </p-accordion>
+    </fieldset>
+</div>
+
+<div class="align-content-center flex justify-content-center flex-wrap m-3">
+    <p>Fecha del proceso: {{fechaProcesoString}}</p>
+</div>
+
+<div class="align-content-center flex justify-content-center flex-wrap">
+    <app-table  [columns]="columns" [data]="data"></app-table>
+</div>
+

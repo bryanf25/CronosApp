@@ -5,6 +5,7 @@ import { Observable } from 'rxjs';
 import { RechazosVisacion } from '../interfaces/rechazos-visacion.interface';
 import { DevolucionEnviada } from '../interfaces/devolucion-enviada.interface';
 import { ChequeFueraRango } from '../interfaces/cheque-fuera-rango.interface';
+import { DevolucionRecibida } from '../interfaces/devolucion-recibida.interface';
 
 @Injectable({
   providedIn: 'root'
@@ -26,5 +27,8 @@ export class VistasService {
   
   getChequesFueraRango(): Observable<ChequeFueraRango[]>{
     return this.http.get<ChequeFueraRango[]>(`${this.url}/chequesFueraRango`)
+  }
+  getDevolucionRecibida(): Observable<DevolucionRecibida[]>{
+    return this.http.get<DevolucionRecibida[]>(`${this.url}/devolucionRecibida`)
   }
 }

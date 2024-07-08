@@ -22,6 +22,7 @@ export class RechazosVisacionYaPagadosComponent implements OnInit {
   centrosDeCanje!: CentroCanje[];
   oficinas!: Oficina[];
   fechaProcesoString: string = ''
+  
   columns: ColumnTable[] = [
     { field: 'tipoOperacion', header: 'Tipo Operación', type: 'text' },
     { field: 'cencje', header: 'Cencje', type: 'text' },
