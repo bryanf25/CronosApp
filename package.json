@@ -8,6 +8,7 @@
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
+    
     "serve:ssr:CronosApp": "node dist/cronos-app/server/server.mjs"
   },
   "private": true,
