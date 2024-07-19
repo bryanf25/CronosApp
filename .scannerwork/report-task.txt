@@ -2,5 +2,5 @@ projectKey=CronosApp
 serverUrl=http://localhost:9000
 serverVersion=10.6.0.92116
 dashboardUrl=http://localhost:9000/dashboard?id=CronosApp
-ceTaskId=3818b3f8-b2f0-42dc-a3f7-245bcd315798
-ceTaskUrl=http://localhost:9000/api/ce/task?id=3818b3f8-b2f0-42dc-a3f7-245bcd315798
+ceTaskId=822612d5-0a7e-43b7-8b2f-f29d8328aad7
+ceTaskUrl=http://localhost:9000/api/ce/task?id=822612d5-0a7e-43b7-8b2f-f29d8328aad7

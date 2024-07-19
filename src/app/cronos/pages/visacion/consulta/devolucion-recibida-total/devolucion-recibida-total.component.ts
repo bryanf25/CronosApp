@@ -32,7 +32,7 @@ export class DevolucionRecibidaTotalComponent  implements OnInit{
     { field: 'devEsp', header: 'Dev Esp', type: 'text' },
     { field: 'tipoProducto', header: 'Tipo Producto', type: 'text' },
     { field: 'productoAfectado', header: 'Producto Afectado', type: 'text' },
-    { field: 'tipCtaRecaudo', header: 'Tipo Cuenta Recaudo', type: 'text' },
+    { field: 'tipoCuentaRecaudo', header: 'Tipo Cuenta Recaudo', type: 'text' },
     { field: 'comprobante', header: 'Comprobante', type: 'text' },
     { field: 'chqBanco', header: 'CHQ-Banco', type: 'text' },
     { field: 'chqCuenta', header: 'CHQ-Cuenta', type: 'text' },
