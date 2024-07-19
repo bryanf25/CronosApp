@@ -5,7 +5,7 @@ import { HttpClientTestingModule, HttpTestingController } from '@angular/common/
 import { RechazosVisacion } from '../interfaces/rechazos-visacion.interface';
 
 
-import { mockBackend } from '../../mocks/mockbackend';
+import { mockBackend } from '../../Mocks/mockbackend';
 
 import { environment } from '../../../environments/enviroment';
 import { DevolucionEnviada } from '../interfaces/devolucion-enviada.interface';
