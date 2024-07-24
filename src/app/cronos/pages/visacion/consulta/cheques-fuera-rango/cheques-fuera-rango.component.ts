@@ -42,5 +42,10 @@ export class ChequesFueraRangoComponent  {
     private centroCanjeService: CentroCanjeService,
     private oficinasService: OficinaService
   ) { }
+
+  searchData() {
+    this.vistasService.getChequesFueraRango().subscribe(response => this.data = response)
+
+  }
   
 }

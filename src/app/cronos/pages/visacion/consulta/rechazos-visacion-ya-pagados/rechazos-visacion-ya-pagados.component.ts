@@ -46,10 +46,10 @@ export class RechazosVisacionYaPagadosComponent  {
     private oficinasService: OficinaService
   ) { }
 
- 
+  searchData() {
+    this.vistasService.getRechazosVisacionYaPagados().subscribe(response => this.data = response)
 
-
-
+  }
 
 
 }

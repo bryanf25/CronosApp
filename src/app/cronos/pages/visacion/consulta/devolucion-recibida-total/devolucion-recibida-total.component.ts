@@ -47,6 +47,10 @@ export class DevolucionRecibidaTotalComponent  {
     private centroCanjeService: CentroCanjeService,
     private oficinasService: OficinaService
   ) { }
+  
+  searchData() {
+    this.vistasService.getDevolucionRecibida().subscribe(response => this.data = response)
 
+  }
  
 }

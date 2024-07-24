@@ -45,5 +45,9 @@ export class DevolucionEnviadaTotalComponent {
     private oficinasService: OficinaService
   ) { }
   
+  searchData() {
+    this.vistasService.getDevolucionEnviada().subscribe(response => this.data = response)
 
+  }
+  
 }
