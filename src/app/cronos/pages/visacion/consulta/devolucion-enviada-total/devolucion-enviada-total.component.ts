@@ -1,5 +1,4 @@
-import { Component, OnInit } from '@angular/core';
-import { format } from 'date-fns';
+import { Component } from '@angular/core';
 import { Oficina } from '../../../../interfaces/consultas/oficina.interface';
 import { CentroCanje } from '../../../../interfaces/consultas/centros-canje.interface';
 import { FormBuilder, FormGroup } from '@angular/forms';
@@ -14,7 +13,7 @@ import { OficinaService } from '../../../../services/oficina.service';
   templateUrl: './devolucion-enviada-total.component.html',
   styleUrl: './devolucion-enviada-total.component.scss'
 })
-export class DevolucionEnviadaTotalComponent implements OnInit {
+export class DevolucionEnviadaTotalComponent {
 
   devolucionEnviadaForm!: FormGroup;
   centrosDeCanje!: CentroCanje[];
@@ -46,43 +45,5 @@ export class DevolucionEnviadaTotalComponent implements OnInit {
     private oficinasService: OficinaService
   ) { }
   
-  ngOnInit(): void {
-    this.loadCentrosCanje();
-    this.loadOficinas();
-    this.fechaProcesoString = format(this.fechaProceso, 'dd/MM/yyyy')
-  }
 
-  loadCentrosCanje() {
-    this.centroCanjeService.getAll().subscribe(response =>{
-      this.centrosDeCanje = response
-      this.centrosDeCanje = this.centrosDeCanje.map(centrocanje => ({
-        ...centrocanje,
-        displayName: `${centrocanje.id} - ${centrocanje.nombre}`
-      }));
-    }
-    )
-  }
-
-  loadOficinas() {
-    this.oficinasService.getAll().subscribe(response => {
-      this.oficinas = response
-      this.oficinas = this.oficinas.map(oficina => ({
-        ...oficina,
-        displayName: `${oficina.id} - ${oficina.nombre}`
-      }));
-    }
-    )
-  }
-
-  initFormFilter() {
-    this.devolucionEnviadaForm = this.fb.group({
-      centralcanje: [''],
-      oficina: ['']
-    })
-  }
-
-  searchData() {
-    this.vistasService.getDevolucionEnviada().subscribe(response => this.data = response)
-
-  }
 }

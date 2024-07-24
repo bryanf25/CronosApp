@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { CentroCanje } from '../../../../interfaces/consultas/centros-canje.interface';
 import { Oficina } from '../../../../interfaces/consultas/oficina.interface';
 import { FormBuilder } from '@angular/forms';
@@ -6,7 +6,6 @@ import { VistasService } from '../../../../services/vistas.service';
 import { CentroCanjeService } from '../../../../services/centro-canje.service';
 import { OficinaService } from '../../../../services/oficina.service';
 import { DevolucionRecibida } from '../../../../interfaces/devolucion-recibida.interface';
-import { format } from 'date-fns';
 import { ColumnTable } from '../../../../interfaces/column-table.interface';
 
 @Component({
@@ -14,7 +13,7 @@ import { ColumnTable } from '../../../../interfaces/column-table.interface';
   templateUrl: './devolucion-recibida-total.component.html',
   styleUrl: './devolucion-recibida-total.component.scss'
 })
-export class DevolucionRecibidaTotalComponent  implements OnInit{
+export class DevolucionRecibidaTotalComponent  {
   centrosCanjeReceptor!: CentroCanje[];
   oficinas!: Oficina[];
   fechaProceso: Date = new Date();
@@ -32,7 +31,7 @@ export class DevolucionRecibidaTotalComponent  implements OnInit{
     { field: 'devEsp', header: 'Dev Esp', type: 'text' },
     { field: 'tipoProducto', header: 'Tipo Producto', type: 'text' },
     { field: 'productoAfectado', header: 'Producto Afectado', type: 'text' },
-    { field: 'tipCtaRecaudo', header: 'Tipo Cuenta Recaudo', type: 'text' },
+    { field: 'tipoCuentaRecaudo', header: 'Tipo Cuenta Recaudo', type: 'text' },
     { field: 'comprobante', header: 'Comprobante', type: 'text' },
     { field: 'chqBanco', header: 'CHQ-Banco', type: 'text' },
     { field: 'chqCuenta', header: 'CHQ-Cuenta', type: 'text' },
@@ -49,38 +48,5 @@ export class DevolucionRecibidaTotalComponent  implements OnInit{
     private oficinasService: OficinaService
   ) { }
 
-  ngOnInit(): void {
-    this.loadCentrosCanje();
-    this.loadOficinas();
-    this.fechaProcesoString = format(this.fechaProceso, 'dd/MM/yyyy') 
-   }
-
-   loadCentrosCanje() {
-    this.centroCanjeService.getAll().subscribe(response =>{
-      this.centrosCanjeReceptor = response
-      this.centrosCanjeReceptor = this.centrosCanjeReceptor.map(centrocanje => ({
-        ...centrocanje,
-        displayName: `${centrocanje.id} - ${centrocanje.nombre}`
-      }));
-    }
-    )
-  }
-
-  loadOficinas() {
-    this.oficinasService.getAll().subscribe(response => {
-      this.oficinas = response
-      this.oficinas = this.oficinas.map(oficina => ({
-        ...oficina,
-        displayName: `${oficina.id} - ${oficina.nombre}`
-      }));
-    }
-    )
-  }
-
-
-
-  searchData() {
-    this.vistasService.getDevolucionRecibida().subscribe(response => this.data = response)
-
-  }
+ 
 }

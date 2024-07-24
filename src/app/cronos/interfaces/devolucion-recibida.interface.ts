@@ -6,7 +6,7 @@ export interface DevolucionRecibida {
     devEspecial: string, 
     tipoProducto: string, 
     productoAfectado: string, 
-    tipoCuentaRecuado: string, 
+    tipoCuentaRecaudo: string, 
     comprobante: number, 
     chqBanco: string, 
     chqCuenta: string, 

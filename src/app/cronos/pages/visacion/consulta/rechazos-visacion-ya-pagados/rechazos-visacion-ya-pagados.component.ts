@@ -1,5 +1,4 @@
-import { Component, OnInit } from '@angular/core';
-import { format } from 'date-fns';
+import { Component } from '@angular/core';
 import { ColumnTable } from '../../../../interfaces/column-table.interface';
 import { RechazosVisacion } from '../../../../interfaces/rechazos-visacion.interface';
 import { VistasService } from '../../../../services/vistas.service';
@@ -15,7 +14,7 @@ import { Oficina } from '../../../../interfaces/consultas/oficina.interface';
   templateUrl: './rechazos-visacion-ya-pagados.component.html',
   styleUrl: './rechazos-visacion-ya-pagados.component.scss'
 })
-export class RechazosVisacionYaPagadosComponent implements OnInit {
+export class RechazosVisacionYaPagadosComponent  {
 
   rechazosVisacionYaForm!: FormGroup;
   fechaProceso: Date = new Date();
@@ -47,48 +46,7 @@ export class RechazosVisacionYaPagadosComponent implements OnInit {
     private oficinasService: OficinaService
   ) { }
 
-  ngOnInit(): void {
-    this.loadCentrosCanje();
-    this.loadOficinas();
-    this.fechaProcesoString = format(this.fechaProceso, 'dd/MM/yyyy')
-
-  }
-
-  initFormFilter() {
-    this.rechazosVisacionYaForm = this.fb.group({
-      centralcanje: [''],
-      oficina: ['']
-    })
-  }
-
-  loadCentrosCanje() {
-    this.centroCanjeService.getAll().subscribe(response =>{
-      this.centrosDeCanje = response
-      this.centrosDeCanje = this.centrosDeCanje.map(centrocanje => ({
-        ...centrocanje,
-        displayName: `${centrocanje.id} - ${centrocanje.nombre}`
-      }));
-    }
-    )
-  }
-
-  loadOficinas() {
-    this.oficinasService.getAll().subscribe(response => {
-      this.oficinas = response
-      this.oficinas = this.oficinas.map(oficina => ({
-        ...oficina,
-        displayName: `${oficina.id} - ${oficina.nombre}`
-      }));
-    }
-    )
-  }
-
-
-  searchData() {
-    this.vistasService.getRechazosVisacionYaPagados().subscribe(response => this.data = response)
-
-  }
-
+ 
 
 
 
