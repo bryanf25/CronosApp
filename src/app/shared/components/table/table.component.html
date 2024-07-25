@@ -1,7 +1,7 @@
 <p-table [value]="data" styleClass="p-datatable-gridlines" >
     <ng-template pTemplate="header">
       <tr>
-        <th *ngFor="let col of columns" class="text-center">{{col.header}}</th>
+        <th *ngFor="let col of columns" class="text-center" scope="col">{{col.header}}</th>
       </tr>
     </ng-template>
    <ng-template pTemplate="body" let-rowData>
