@@ -11,18 +11,13 @@ import { ColumnTable } from '../../../../interfaces/column-table.interface';
 @Component({
   selector: 'app-devolucion-recibida-total',
   templateUrl: './devolucion-recibida-total.component.html',
-  styleUrl: './devolucion-recibida-total.component.scss'
 })
 export class DevolucionRecibidaTotalComponent  {
   centrosCanjeReceptor!: CentroCanje[];
   oficinas!: Oficina[];
   fechaProceso: Date = new Date();
-  fechaProcesoString: string = ''
-
+  fechaProcesoString?: string;
   data: DevolucionRecibida[] = [];
-
-
-
   columns: ColumnTable[] = [
     { field: 'oficinaRec', header: 'Oficina Rec', type: 'text' },
     { field: 'redAfectada', header: 'Red Afectada', type: 'text' },
@@ -39,18 +34,16 @@ export class DevolucionRecibidaTotalComponent  {
     { field: 'chqValor', header: 'CHQ-Valor', type: 'text' },
     { field: 'causalDevolucion1', header: 'Causal Devolucion 1', type: 'text' },
     { field: 'causalDevolucionOri', header: 'Causal Devolucion Original', type: 'text' },
-  ];;
+  ];
 
   constructor(
-    private fb: FormBuilder,
-    private vistasService: VistasService,
-    private centroCanjeService: CentroCanjeService,
-    private oficinasService: OficinaService
+    private readonly fb: FormBuilder,
+    private readonly vistasService: VistasService,
+    private readonly centroCanjeService: CentroCanjeService,
+    private readonly oficinasService: OficinaService
   ) { }
-  
+
   searchData() {
     this.vistasService.getDevolucionRecibida().subscribe(response => this.data = response)
-
   }
- 
 }

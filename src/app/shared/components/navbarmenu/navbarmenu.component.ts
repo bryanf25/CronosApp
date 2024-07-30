@@ -4,7 +4,6 @@ import { MegaMenuItem,PrimeIcons } from 'primeng/api';
 @Component({
   selector: 'app-navbarmenu',
   templateUrl: './navbarmenu.component.html',
-  styleUrl: './navbarmenu.component.scss'
 })
 export class NavbarmenuComponent implements OnInit {
 

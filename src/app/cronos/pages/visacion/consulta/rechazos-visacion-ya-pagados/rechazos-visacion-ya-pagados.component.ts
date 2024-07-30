@@ -12,7 +12,6 @@ import { Oficina } from '../../../../interfaces/consultas/oficina.interface';
 @Component({
   selector: 'app-rechazos-visacion-ya-pagados',
   templateUrl: './rechazos-visacion-ya-pagados.component.html',
-  styleUrl: './rechazos-visacion-ya-pagados.component.scss'
 })
 export class RechazosVisacionYaPagadosComponent  {
 
@@ -20,8 +19,7 @@ export class RechazosVisacionYaPagadosComponent  {
   fechaProceso: Date = new Date();
   centrosDeCanje!: CentroCanje[];
   oficinas!: Oficina[];
-  fechaProcesoString: string = ''
-  
+  fechaProcesoString?: string;
   columns: ColumnTable[] = [
     { field: 'tipoOperacion', header: 'Tipo Operación', type: 'text' },
     { field: 'cencje', header: 'Cencje', type: 'text' },
@@ -35,21 +33,17 @@ export class RechazosVisacionYaPagadosComponent  {
     { field: 'motivoRechazo', header: 'Motivo Rechazo', type: 'text' },
     { field: 'causaDev1', header: 'CausaDev1', type: 'text' },
     { field: 'causaDev2', header: 'CausaDev2', type: 'text' }
-  ];;
-
+  ];
   data: RechazosVisacion[] = [];
 
   constructor(
-    private fb: FormBuilder,
-    private vistasService: VistasService,
-    private centroCanjeService: CentroCanjeService,
-    private oficinasService: OficinaService
+    private readonly fb: FormBuilder,
+    private readonly vistasService: VistasService,
+    private readonly centroCanjeService: CentroCanjeService,
+    private readonly oficinasService: OficinaService
   ) { }
 
   searchData() {
     this.vistasService.getRechazosVisacionYaPagados().subscribe(response => this.data = response)
-
   }
-
-
 }

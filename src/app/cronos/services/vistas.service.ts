@@ -13,9 +13,9 @@ import { DevolucionRecibida } from '../interfaces/devolucion-recibida.interface'
 export class VistasService {
 
 
-  url : string =`${environment.apiUrl}`
+  url =`${environment.apiUrl}`
 
-  constructor(private http:HttpClient) { }
+  constructor(private readonly http:HttpClient) { }
 
   getRechazosVisacionYaPagados(): Observable<RechazosVisacion[]>{
     return this.http.get<RechazosVisacion[]>(`${this.url}/rechazosVisacion`)
@@ -24,11 +24,13 @@ export class VistasService {
   getDevolucionEnviada(): Observable<DevolucionEnviada[]>{
     return this.http.get<DevolucionEnviada[]>(`${this.url}/devolucionEnviada`)
   }
-  
+
   getChequesFueraRango(): Observable<ChequeFueraRango[]>{
     return this.http.get<ChequeFueraRango[]>(`${this.url}/chequesFueraRango`)
   }
+
   getDevolucionRecibida(): Observable<DevolucionRecibida[]>{
     return this.http.get<DevolucionRecibida[]>(`${this.url}/devolucionRecibida`)
   }
+
 }

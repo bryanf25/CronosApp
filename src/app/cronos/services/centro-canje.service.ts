@@ -8,9 +8,9 @@ import { CentroCanje } from '../interfaces/consultas/centros-canje.interface';
 })
 export class CentroCanjeService {
 
-  url : string =`${environment.apiUrl}`
+  url =`${environment.apiUrl}`
 
-  constructor(private http:HttpClient) { }
+  constructor(private readonly http:HttpClient) { }
 
   getAll(){
     return this.http.get<CentroCanje[]>(`${this.url}/centrosCanje`)

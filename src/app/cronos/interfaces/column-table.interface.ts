@@ -1,5 +1,5 @@
 export interface ColumnTable {
     field: string,
-    header: string,  
+    header: string,
     type: string
 }

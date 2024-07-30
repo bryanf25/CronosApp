@@ -10,7 +10,7 @@ import { Location } from '@angular/common';
 export class AppComponent {
   title = 'CronosApp';
 
-  constructor(private location: Location) { }
+  constructor(private readonly location: Location) { }
 
 
   goBack(){

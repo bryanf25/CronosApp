@@ -11,7 +11,6 @@ import { OficinaService } from '../../../../services/oficina.service';
 @Component({
   selector: 'app-devolucion-enviada-total',
   templateUrl: './devolucion-enviada-total.component.html',
-  styleUrl: './devolucion-enviada-total.component.scss'
 })
 export class DevolucionEnviadaTotalComponent {
 
@@ -19,8 +18,7 @@ export class DevolucionEnviadaTotalComponent {
   centrosDeCanje!: CentroCanje[];
   oficinas!: Oficina[];
   fechaProceso: Date = new Date();
-  fechaProcesoString: string = ''
-
+  fechaProcesoString?: string;
   columns: ColumnTable[] = [
     { field: 'oficinaDestino', header: 'Oficina Destino', type: 'text' },
     { field: 'codigoCeo', header: 'Codigo Ceo', type: 'text' },
@@ -33,21 +31,17 @@ export class DevolucionEnviadaTotalComponent {
     { field: 'numeroCheque', header: 'Numero Cheque', type: 'text' },
     { field: 'centralCanje', header: 'Central Canje', type: 'text' },
     { field: 'valorTotal', header: 'Valor Total', type: 'text' },
-  ];;
-
-
+  ];
   data: DevolucionEnviada[] = [];
 
   constructor(
-    private fb: FormBuilder,
-    private vistasService: VistasService,
-    private centroCanjeService: CentroCanjeService,
-    private oficinasService: OficinaService
+    private readonly fb: FormBuilder,
+    private readonly vistasService: VistasService,
+    private readonly centroCanjeService: CentroCanjeService,
+    private readonly oficinasService: OficinaService
   ) { }
-  
+
   searchData() {
     this.vistasService.getDevolucionEnviada().subscribe(response => this.data = response)
-
   }
-  
 }

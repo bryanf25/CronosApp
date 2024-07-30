@@ -8,9 +8,9 @@ import { Oficina } from '../interfaces/consultas/oficina.interface';
 })
 export class OficinaService {
 
-  url : string =`${environment.apiUrl}`
+  url =`${environment.apiUrl}`
 
-  constructor(private http:HttpClient) { }
+  constructor(private readonly http:HttpClient) { }
 
   getAll(){
     return this.http.get<Oficina[]>(`${this.url}/oficinas`)

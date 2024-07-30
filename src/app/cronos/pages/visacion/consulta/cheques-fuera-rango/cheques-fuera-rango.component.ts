@@ -11,7 +11,6 @@ import { ColumnTable } from '../../../../interfaces/column-table.interface';
 @Component({
   selector: 'app-cheques-fuera-rango',
   templateUrl: './cheques-fuera-rango.component.html',
-  styleUrl: './cheques-fuera-rango.component.scss'
 })
 export class ChequesFueraRangoComponent  {
 
@@ -19,8 +18,7 @@ export class ChequesFueraRangoComponent  {
   centrosDeCanje!: CentroCanje[];
   oficinas!: Oficina[];
   fechaProceso: Date = new Date();
-  fechaProcesoString: string = ''
-
+  fechaProcesoString?: string;
   columns: ColumnTable[] = [
     { field: 'oficinaCeo', header: 'Oficina/CEO', type: 'text' },
     { field: 'cuenta', header: 'Cuenta', type: 'text' },
@@ -31,21 +29,18 @@ export class ChequesFueraRangoComponent  {
     { field: 'razon', header: 'Razon', type: 'text' },
     { field: 'cabeceraCentroCanje', header: 'Cabecera Centro Canje', type: 'text' },
     { field: 'centroCanje', header: 'Centro Canje', type: 'text' },
-  ];;
-  
+  ];
   data: ChequeFueraRango[] = [];
 
 
   constructor(
-    private fb: FormBuilder,
-    private vistasService: VistasService,
-    private centroCanjeService: CentroCanjeService,
-    private oficinasService: OficinaService
+    private readonly fb: FormBuilder,
+    private readonly vistasService: VistasService,
+    private readonly centroCanjeService: CentroCanjeService,
+    private readonly oficinasService: OficinaService
   ) { }
 
   searchData() {
     this.vistasService.getChequesFueraRango().subscribe(response => this.data = response)
-
   }
-  
 }

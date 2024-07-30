@@ -13,18 +13,6 @@
           <ng-template #normalField>
             {{rowData[col.field]}}
           </ng-template>
-
-          <!-- <ng-container [ngSwitch]="col.type">
-            <ng-container *ngSwitchCase="'text'">{{rowData[col.field]}}</ng-container>
-            <ng-container *ngSwitchCase="'dropdown'">
-              <p-dropdown 
-                [options]="col.options"
-                [(ngModel)]="rowData[col.field]"
-                [style]="{width:'100%'}"
-                [placeholder]="'Select a value'">
-              </p-dropdown>
-            </ng-container>
-          </ng-container> -->
         </td>
       </tr>
     </ng-template>
